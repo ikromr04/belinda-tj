@@ -34,6 +34,7 @@
   @endif
   <link rel="stylesheet" href="{{ asset('glide/glide.css') }}">
   <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+  {!! htmlScriptTagJsApi() !!}
 </head>
 
 <body class="{{ $route == 'products.attention' ? 'attention' : '' }} {{ $route == 'carrier.apply' ? 'apply' : '' }}">

@@ -2219,6 +2219,60 @@ body.attention .container {
 }
 
 /* =>> adaptation */
+.ae-section {
+  font-size: 16px;
+  margin-bottom: 32px;
+}
+
+.ae-section a:hover {
+  text-decoration: underline;
+}
+
+.ae-section>*:first-child {
+  font-size: 24px;
+}
+
+.ae-section dt {
+  margin-bottom: 4px;
+  font-size: 16px;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+.ae-section dl strong {
+  font-weight: normal;
+  color: #DE3B21;
+}
+
+.ae-section dd {
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.ae-section dd a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #337ab7;
+}
+
+.ae-section form {
+  margin: 32px auto;
+  max-width: 800px;
+}
+
+.ae-section h3 {
+  font-size: 16px;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+.ae-link {
+  text-decoration: none;
+  color: #337ab7;
+  font-weight: bold;
+}
 
 /* main search */
 .search-result-list {

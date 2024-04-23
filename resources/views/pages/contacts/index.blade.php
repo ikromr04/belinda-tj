@@ -16,7 +16,7 @@
         </ul>
       </section>
 
-      <form class="form sample-wrapper sample-wrapper--dark"  action="{{ route('apply') }}" method="post" enctype="multipart/form-data">
+      <form class="form sample-wrapper sample-wrapper--dark"  action="{{ route('apply') }}" method="post" enctype="multipart/form-data" id="apply-form">
         @csrf
         <input type="hidden" name="vacancy" value="Обратная связь">
         <fieldset class="form__group">
@@ -40,6 +40,65 @@
         </div>
       </form>
     </div>
+
+    <section class="ae-section">
+      <p>Чтобы сообщить о жалобе на продукт/нежелательном явлении, используйте приведенную ниже контактную информацию.</p>
+      <dl>
+        <dt>Контактный номер:</dt>
+        <dd>
+          <a href="tel:+77771750099">+77771750099</a>
+          <strong>(по вопросам безопасности лекарств)</strong>
+        </dd>
+        <dt>Контактный E-mail:</dt>
+        <dd>
+          <a href="mailto:drugsafety@evolet.co.uk">drugsafety@evolet.co.uk</a>
+          <strong>(по вопросам безопасности лекарств)</strong>
+        </dd>
+      </dl>
+      <form class="form sample-wrapper sample-wrapper--dark" id="ae-form" action="{{ route('ae') }}" method="post">
+        @csrf
+        <fieldset class="form__group">
+          <legend class="form__title sample-wrapper__title sample-wrapper__title--big">Форма для отправки жалобы:</legend>
+          <p class="form__item">
+            <input class="form__input" id="inititals" type="text" name="inititals" placeholder="Инициалы пациента" required data-pristine-required-message="Объязательное поле">
+          </p>
+          <p class="form__item">
+            <input class="form__input" id="age" type="number" name="age" placeholder="Возраст (лет) (необязательный)">
+          </p>
+          <p class="form__item">
+            <input class="form__input" id="weight" type="number" name="weight" placeholder="Вес (кг) (необязательный)">
+          </p>
+          <p class="form__item">
+            <input class="form__input" id="hight" type="number" name="hight" placeholder="Рост (см) (необязательный)">
+          </p>
+          <p class="form__item">
+            <input class="form__input" id="event" type="text" name="event" placeholder="Нежелательная реакция" required data-pristine-required-message="Объязательное поле">
+          </p>
+          <p class="form__item">
+            <input class="form__input" id="suspect" type="text" name="suspect" placeholder="Лекарственные средства, вызвавшие нежелательную реакцию" required data-pristine-required-message="Объязательное поле">
+          </p>
+          <p class="form__item">
+            <input class="form__input" id="name" type="text" name="name" placeholder="Имя сообщающего лица" required data-pristine-required-message="Объязательное поле">
+          </p>
+          <p class="form__item">  
+            <input class="form__input" type="email" name="email" id="email" placeholder="Электронная почта сообщающего лица" required data-pristine-required-message="Объязательное поле" data-pristine-email-message="E-mail не является допустимым">
+          </p>
+          <p class="form__item">
+            <input class="form__input" type="tel" id="phone" name="phone" placeholder="Номер мобильного телефона сообщающего лица " required data-pristine-required-message="Объязательное поле">
+          </p>
+        </fieldset>
+        <div class="form__footer">
+          <button class="form__submit-btn red-link" type="submit">Отправить</button>
+        </div>
+      </form>
+
+      <p>Нажмите, чтобы загрузить <a class="ae-link" href="/ae-form-ru.docx">форму сообщения о нежелательных явлениях</a> для детального отчета.</p>
+      <p>После отправки формы онлайн вы получите подтверждение на свой адрес электронной почты. С вами свяжутся лично только в том случае, если потребуется какая-либо дополнительная информация. Если вам нужна помощь в заполнении формы, вы можете позвонить нашему менеджеру для онлайн-поддержки.</p>
+
+      <h3>Конфиденциальность:</h3>
+      <p>Вся информация и личные данные, которыми вы делитесь с нами, будут защищены и сохранены в тайне. Предоставленная вами информация может быть передана органам здравоохранения.</p>
+      <p>Сообщение здесь не означает признания того, что продукт компании вызвал реакцию или способствовал ей.</p>
+    </section>
 
     <div class="contacts-page map-wrapper">
       <svg id="map" xmlns:mapsvg="http://mapsvg.com" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" id="svg2" height="100%" width="100%" mapsvg:geoViewBox="-169.110266 83.639571 190.486279 -57.940973" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1009 665">

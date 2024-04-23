@@ -1,6 +1,24 @@
-const applyForm = document.querySelector('.form');
+// const applyForm = document.querySelector('#apply-form');
+const aeForm = document.querySelector('#ae-form');
 
-const pristine = window.Pristine(applyForm, {
+// const pristine = window.Pristine(applyForm, {
+//   classTo: 'form__item',
+//   errorClass: 'form__item--invalid',
+//   successClass: 'form__item--valid',
+//   errorTextParent: 'form__item',
+//   errorTextTag: 'div',
+//   errorTextClass: 'form__error'
+// }, true);
+
+// applyForm.addEventListener('submit', (evt) => {
+//   evt.preventDefault();
+//   const isValid = pristine.validate();
+//   if (isValid) {
+//     console.log('valid');
+//   }
+// });
+
+const pristineAe = window.Pristine(aeForm, {
   classTo: 'form__item',
   errorClass: 'form__item--invalid',
   successClass: 'form__item--valid',
@@ -9,13 +27,10 @@ const pristine = window.Pristine(applyForm, {
   errorTextClass: 'form__error'
 }, true);
 
-applyForm.addEventListener('submit', (evt) => {
+aeForm.addEventListener('submit', (evt) => {
   evt.preventDefault();
-  const isValid = pristine.validate();
+  const isValid = pristineAe.validate();
   if (isValid) {
-    evt.target.querySelector('button[type="submit"]')
-      .textContent = 'Отправляю...'
-      
-    evt.target.submit();
+    aeForm.submit();
   }
 });
